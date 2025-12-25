@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowerAI - Sistem Klasifikasi Bunga Cerdas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-flower"></i>
+                <span>FlowerAI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#fitur">Fitur</a></li>
+                <li><a href="#cara-kerja">Cara Kerja</a></li>
+                <li><a href="#mulai">Mulai</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>FlowerAI – Sistem Klasifikasi Bunga Cerdas</h1>
+                <p>Klasifikasi jenis bunga secara otomatis menggunakan teknologi Deep Learning terdepan untuk analisis yang akurat dan mudah.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('mulai')">
+                        <i class="fas fa-camera"></i> Mulai Prediksi
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('cara-kerja')">
+                        <i class="fas fa-book"></i> Pelajari Cara
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>102</h3>
+                        <p>Jenis Bunga</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>95%</h3>
+                        <p>Akurasi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Analisis Real-time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fitur" class="features">
+        <div class="container">
+            <h2>Fitur Unggulan</h2>
+            <p class="section-subtitle">Powered dengan teknologi terbaik untuk pengalaman terbaik</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Upload Gambar</h3>
+                    <p>Upload foto bunga dari perangkat Anda untuk klasifikasi instan</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Kamera Real-time</h3>
+                    <p>Gunakan kamera untuk menangkap gambar bunga secara langsung</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Pencarian Cerdas</h3>
+                    <p>Cari informasi bunga berdasarkan hasil klasifikasi akurat</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Analisis Detail</h3>
+                    <p>Dapatkan laporan analisis mendalam tentang setiap klasifikasi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="cara-kerja" class="how-it-works">
+        <div class="container">
+            <h2>Cara Kerja Sistem</h2>
+            <p class="section-subtitle">Prosedur lengkap untuk mengidentifikasi bunga Anda</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Input Gambar</h3>
+                    <p>Unggah gambar bunga dari galeri atau ambil dengan kamera</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Proses AI</h3>
+                    <p>Model Deep Learning menganalisis fitur visual gambar</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Analisis Data</h3>
+                    <p>Sistem membandingkan dengan database 102 jenis bunga</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Hasil Lengkap</h3>
+                    <p>Dapatkan nama bunga dan tingkat kepercayaan prediksi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classification Section -->
+    <section id="mulai" class="classification">
+        <div class="container">
+            <h2>Mulai Klasifikasi</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="upload">
+                    <i class="fas fa-cloud-upload-alt"></i> Upload Gambar
+                </button>
+                <button class="tab-btn" data-tab="camera">
+                    <i class="fas fa-camera"></i> Kamera Real-time
+                </button>
+                <button class="tab-btn" data-tab="search">
+                    <i class="fas fa-search"></i> Cari Bunga
+                </button>
+            </div>
+
+            <!-- Upload Tab -->
+            <div id="upload" class="tab-content active">
+                <div class="classification-card">
+                    <div class="upload-section">
+                        <h3><i class="fas fa-cloud-upload-alt"></i> Upload Gambar Bunga</h3>
+                        <div class="upload-box" id="uploadBox">
+                            <i class="fas fa-image"></i>
+                            <p>Seret & lepas gambar di sini atau klik untuk memilih</p>
+                            <small>Format: JPG, PNG, GIF | Ukuran max: 16MB</small>
+                            <input type="file" id="fileInput" accept="image/*" hidden>
+                        </div>
+                        <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                            Pilih Gambar
+                        </button>
+
+                        <div id="uploadPreview" class="upload-preview" style="display:none;">
+                            <img id="previewImage" alt="Preview">
+                            <button class="btn btn-danger" onclick="resetUpload()">
+                                <i class="fas fa-times"></i> Batal
+                            </button>
+                        </div>
+
+                        <button class="btn btn-success" id="predictBtn" onclick="predictImage()" style="display:none;">
+                            <i class="fas fa-magic"></i> Mulai Prediksi
+                        </button>
+
+                        <div id="uploadLoading" class="loading" style="display:none;">
+                            <div class="spinner"></div>
+                            <p>Menganalisis gambar...</p>
+                        </div>
+
+                        <div id="uploadResult" class="result-card" style="display:none;">
+                            <h3>Hasil Prediksi</h3>
+                            <div class="result-content">
+                                <div class="result-flower">
+                                    <img id="resultImage" alt="Flower">
+                                </div>
+                                <div class="result-info">
+                                    <h4 id="flowerName"></h4>
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" id="confidenceFill"></div>
+                                    </div>
+                                    <p id="confidenceText"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camera Tab -->
+            <div id="camera" class="tab-content">
+                <div class="classification-card">
+                    <div class="camera-section">
+                        <h3><i class="fas fa-camera"></i> Kamera Real-time</h3>
+                        <video id="cameraStream" autoplay playsinline></video>
+                        <canvas id="cameraCanvas" style="display:none;"></canvas>
+                        
+                        <div class="camera-controls">
+                            <button class="btn btn-primary" id="startCameraBtn" onclick="startCamera()">
+                                <i class="fas fa-play"></i> Aktifkan Kamera
+                            </button>
+                            <button class="btn btn-danger" id="stopCameraBtn" onclick="stopCamera()" style="display:none;">
+                                <i class="fas fa-stop"></i> Hentikan Kamera
+                            </button>
+                            <button class="btn btn-success" id="captureBtn" onclick="captureCamera()" style="display:none;">
+                                <i class="fas fa-camera"></i> Ambil Foto
+                            </button>
+                        </div>
+
+                        <div id="cameraLoading" class="loading" style="display:none;">
+                            <div class="spinner"></div>
+                            <p>Menganalisis foto...</p>
+                        </div>
+
+                        <div id="cameraResult" class="result-card" style="display:none;">
+                            <h3>Hasil Prediksi Kamera</h3>
+                            <div class="result-content">
+                                <div class="result-flower">
+                                    <img id="cameraResultImage" alt="Flower">
+                                </div>
+                                <div class="result-info">
+                                    <h4 id="cameraFlowerName"></h4>
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" id="cameraConfidenceFill"></div>
+                                    </div>
+                                    <p id="cameraConfidenceText"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Tab -->
+            <div id="search" class="tab-content">
+                <div class="classification-card">
+                    <div class="search-section">
+                        <h3><i class="fas fa-search"></i> Cari Bunga</h3>
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Cari nama bunga...">
+                            <button class="btn btn-primary" onclick="searchFlower()">
+                                <i class="fas fa-search"></i> Cari
+                            </button>
+                        </div>
+                        <div id="searchResults" class="search-results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-flower"></i> FlowerAI</h4>
+                    <p>Sistem klasifikasi bunga berbasis AI untuk identifikasi akurat dan mudah.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#fitur">Fitur</a></li>
+                        <li><a href="#cara-kerja">Cara Kerja</a></li>
+                        <li><a href="#mulai">Mulai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Teknologi</h4>
+                    <ul>
+                        <li><a href="#">Deep Learning</a></li>
+                        <li><a href="#">MobileNetV2</a></li>
+                        <li><a href="#">TensorFlow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="#">Email Support</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FlowerAI. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
