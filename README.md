@@ -14,7 +14,7 @@ Website native Flask untuk klasifikasi bunga menggunakan Deep Learning.
 1. **Clone repository**
 ```bash
 git clone <your-repo>
-cd flowerai
+cd Deteksi-Jenis-Bunga
 ```
 
 2. **Install dependencies**
